@@ -1,4 +1,4 @@
-rootProject.name = "tempkmplib"
+rootProject.name = "Tempkmplib"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
