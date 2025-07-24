@@ -16,11 +16,11 @@ core = "1.6.1"
 fragmentKtx = "1.8.6"
 junit = "4.13.2"
 startup = "1.2.0"
-kotlin = "2.2.0"
+kotlin = "2.1.10"
 accompanist-permissions = "0.32.0"
 vanniktech-publish = "0.33.0"
 groupId = "io.github.shadmanadman"
-artifactId = "TempkmplibTest3"
+artifactId = "TempkmplibTest4"
 
 [libraries]
 androidx-core = { module = "androidx.test:core", version.ref = "core" }
