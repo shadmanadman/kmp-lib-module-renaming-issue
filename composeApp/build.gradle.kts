@@ -82,8 +82,7 @@ dependencies {
 
 
 mavenPublishing {
-    publishToMavenCentral()
-    signAllPublications()
+
     val tag: String? = System.getenv("GITHUB_REF")?.split("/")?.lastOrNull()
     coordinates(
         groupId = libs.versions.groupId.get(),
@@ -114,6 +113,8 @@ mavenPublishing {
             url = "https://github.com/shadmanadman/KSensor"
         }
     }
+    publishToMavenCentral()
+    signAllPublications()
 }
 
 signing {
