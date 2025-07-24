@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -92,9 +91,9 @@ mavenPublishing {
     )
 
     pom {
-        name = "KSensor"
+        name = "kmp-lib-module-renaming-issue"
         description = "A KMP library that provides Sensors info for both Android and iOS"
-        url = "https://github.com/shadmanadman/KSensor"
+        url = "https://github.com/shadmanadman/kmp-lib-module-renaming-issue"
         licenses {
             license {
                 name = "Apache License, Version 2.0"
@@ -109,12 +108,12 @@ mavenPublishing {
             }
         }
         scm {
-            connection = "scm:git:https://github.com/shadmanadman/KSensor"
-            developerConnection = "scm:git:github.com/shadmanadman/KSensor.git"
-            url = "https://github.com/shadmanadman/KSensor"
+            connection = "scm:git:https://github.com/shadmanadman/kmp-lib-module-renaming-issue"
+            developerConnection = "scm:git:github.com/shadmanadman/kmp-lib-module-renaming-issue.git"
+            url = "https://github.com/shadmanadman/kmp-lib-module-renaming-issue"
         }
     }
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral()
     signAllPublications()
 }
 
