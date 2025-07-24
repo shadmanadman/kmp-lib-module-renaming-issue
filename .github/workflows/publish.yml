@@ -6,21 +6,33 @@ on:
       - '*'
 
 jobs:
-  build-and-publish:
-    runs-on: ubuntu-latest
 
+  release:
+    name: Publish
+    runs-on: macOS-latest
+    permissions:
+      contents: write
+    timeout-minutes: 60
     steps:
-      - name: Checkout Repository
+
+      - name: Set VERSION environment variable
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Fetch Sources
         uses: actions/checkout@v4
-
-      - name: Setup JDK
-        uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
-          java-version: 17
+          ref: ${{ github.event.release.tag_name }}
 
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+      - uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: true
+          draft: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'temurin'
 
       - name: Publish with Gradle
         env:
