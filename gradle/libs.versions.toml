@@ -1,5 +1,5 @@
 [versions]
-agp = "8.11.0"
+agp = "8.8.1"
 android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
@@ -20,7 +20,7 @@ kotlin = "2.2.0"
 accompanist-permissions = "0.32.0"
 vanniktech-publish = "0.34.0"
 groupId = "io.github.shadmanadman"
-artifactId = "Tempkmplib"
+artifactId = "TempkmplibTest2"
 
 [libraries]
 androidx-core = { module = "androidx.test:core", version.ref = "core" }
